@@ -1,0 +1,92 @@
+#signup-form-div{
+    height: fit-content;
+    width: 400px;
+    border: 1px solid gray;
+    margin: auto;
+    margin-top: 90px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+#signupID>input{
+    border-radius: 4px;
+    height: 35px;
+    width: 300px;
+    border:2px solid darkgray
+
+     
+}
+#signupID{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction:column ;
+}
+#signupID>:last-child{
+    width: 300px;
+    margin-top:15px;
+    margin-left: 5px;
+    cursor: pointer;
+    background-color:darkgray;
+    font-weight: 500;
+    margin-bottom: 25px;
+    margin-top:20px ;
+
+
+}
+.signupsubmit{
+    margin-top: 10px;
+    
+    
+}
+.navbar {
+    height: 75px;
+    width: 95%;
+    margin: auto;
+    /* border: 1px solid rgb(22, 21, 21); */
+    background-color: white;
+    display: flex;
+    justify-content: end;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    position: sticky;
+    top: 10px;
+    left: 10px;
+
+}
+
+
+
+
+.allothers {
+    height: 100%;
+    width: 30%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.allothers>div {
+    height: 50%;
+    width: 25%;
+    /* border: 1px solid red; */
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 15px;
+    
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
