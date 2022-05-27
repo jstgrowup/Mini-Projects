@@ -1,7 +1,7 @@
 let id;
 async function search(filter) {
     try {
-        let url = `http://www.omdbapi.com/?apikey=cc21903c&s=${filter}`;
+        let url = `https://www.omdbapi.com/?apikey=cc21903c&s=${filter}`;
         let res = await fetch(url)
         let data = await res.json()
         return data.Search
