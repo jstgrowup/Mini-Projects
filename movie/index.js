@@ -1,6 +1,7 @@
 function myfun() {
+  const apikey = "cc21903c";
   let filter = document.querySelector("#myInput").value;
-  let url = `http://www.omdbapi.com/?apikey=cc21903c&s=${filter}`;
+  let url = `http://www.omdbapi.com/?apikey=${apikey}&s=${filter}`;
 
   fetch(url)
     .then(function (val) {
