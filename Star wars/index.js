@@ -26,6 +26,7 @@ function display(data) {
   data.forEach(function (el) {
     let name = document.createElement("p");
     name.innerHTML = el.name;
+    name.setAttribute("class","searchres")
     name.addEventListener("click", function () {
       myfun(el);
     });

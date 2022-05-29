@@ -83,4 +83,10 @@ body {
 
 #searchbar>p {
     margin-left: 20px;
+    cursor: pointer;
+}
+.searchres:hover{
+transform: scale(1.04);
+
+
 }
