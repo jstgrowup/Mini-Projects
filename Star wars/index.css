@@ -84,6 +84,7 @@ body {
 #searchbar>p {
     margin-left: 20px;
     cursor: pointer;
+    color: rgb(255, 235, 0);
 }
 .searchres:hover{
 transform: scale(1.04);
