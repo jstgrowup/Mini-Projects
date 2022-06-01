@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .display {
+            height: auto;
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(auto, 1fr);
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+  <div id="upbox">
+        <a href="#"><img src="https://download.logo.wine/logo/YouTube/YouTube-Logo.wine.png" class="youtube-logo"></a>
+        <div class="search-bar">
+            <input type="search" class="search-input" placeholder="Search" id="query">
+            <button type="submit" class="search-btn"><img src="./images/baseline_search_black_24dp.png"
+                    onclick="myfun()"></button>
+        </div>
+        <div class="menu-icons">
+            <a href="#"><img src="./images/baseline_mic_black_24dp.png"></a>
+            <a href="#"><img src="./images/baseline_video_call_black_24dp.png"></a>
+            <a href="#"><img src="./images/baseline_apps_black_24dp.png"></a>
+            <a href="#"><img src="./images/baseline_notifications_black_24dp.png"></a>
+        </div>
+</div>
+<div class="display"></div>
+
+</body>
+
+</html>
+<script src="index.js">
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+ let display = (data) =>   document.querySelector("#display").innerHTML = ""
+   data.forEach(({ id: { videoId }, snippet: { title, thumbnails } }) => {
+
+       let div = document.createElement("div")
+       //    let img=document.createElement("img")        //    img.src=
+       let iframe = document.createElement("iframe")
+       iframe.src = `https://www.youtube.com/embed/${videoId}`
+          iframe.allow="fullscreen"
+          let h3 = document.createElement("h3")
+       h3.innerHTML = title
+          div.append(iframe, h3        let video=            title,videoId
+       };
+       div.onclick=()=>{
+           playvideo(video)
+          }
+          document.querySelector("#display").append(div)
+   });
+
+    }
+    let playvideo=(video)=>{
+     console.log(video);
+        window.localStorage.setItem("video",JSON.stringify(video))
+
+ } -->
