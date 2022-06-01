@@ -16,7 +16,7 @@ let popdis = (data) => {
       snippet: {
         title,
         thumbnails: {
-          default: { url },
+          high: { url },
         },
       },
     }) => {
@@ -40,7 +40,6 @@ let popdis = (data) => {
 
       div.onclick = () => {
         playVideo(video);
-        bigscr(video);
       };
 
       document.querySelector(".display").append(div);
@@ -48,10 +47,6 @@ let popdis = (data) => {
   );
 };
 
-let playVideo = (video) => {
-  localStorage.setItem("video", JSON.stringify(video));
-  window.location.href = "video.html";
-};
 //new syntax(ES6)
 let searchVideos = async (q) => {
   const api_key = "AIzaSyA34gim9-Jn8EdkXgdgVu0yjyVc5egBO_A";
@@ -75,30 +70,45 @@ let myfun = async () => {
 
 let display = (data) => {
   document.querySelector(".display").innerHTML = null;
+  console.log(data);
 
-  // console.log(data);
-  // data.forEach((el) => { el.id.videoId/ el.snippet.title
-  data.forEach(({ id: { videoId }, snippet: { title, thumbnails } }) => {
-    let div = document.createElement("div");
-    div.setAttribute("class", "cards");
-    let iframe = document.createElement("iframe");
-    iframe.src = `https://www.youtube.com/embed/${videoId}`;
-    iframe.allow = "fullscreen";
-   iframe.setAttribute("class", "thumbnails");
-    let h3 = document.createElement("h3");
-    h3.innerText = title;
+  data.forEach(
+    ({
+      id: { videoId },
+      snippet: {
+        title,
+        thumbnails: {
+          high: { url },
+        },
+      },
+    }) => {
+      let div = document.createElement("div");
+      div.setAttribute("class", "cards");
+      let img = document.createElement("img");
+      img.src = url;
+      // let iframe = document.createElement("iframe");
+      // iframe.src = `https://www.youtube.com/embed/${videoId}`;
+      // iframe.allow = "fullscreen";
+      img.setAttribute("class", "thumbnails");
+      let h3 = document.createElement("h3");
+      h3.innerText = title;
 
-    div.append(iframe, h3);
+      div.append(img, h3);
 
-    let video = {
-      title,
-      videoId,
-    };
+      let video = {
+        title,
+        videoId,
+      };
 
-    div.onclick = () => {
-      playVideo(video);
-    };
+      div.onclick = () => {
+        playVideo(video);
+      };
 
-    document.querySelector(".display").append(div);
-  });
+      document.querySelector(".display").append(div);
+    }
+  );
+};
+let playVideo = (video) => {
+  localStorage.setItem("video", JSON.stringify(video));
+  window.location.href = "video.html";
 };
