@@ -25,9 +25,7 @@ let popdis = (data) => {
       let img = document.createElement("img");
       img.src = url;
       img.setAttribute("class", "thumbnails");
-      // let iframe = document.createElement("iframe");
-      // iframe.src = `https://www.youtube.com/embed/${id}`;
-      // iframe.allow = "fullscreen";
+
       let h3 = document.createElement("h3");
       h3.innerText = title;
 
@@ -47,7 +45,6 @@ let popdis = (data) => {
   );
 };
 
-//new syntax(ES6)
 let searchVideos = async (q) => {
   const api_key = "AIzaSyA34gim9-Jn8EdkXgdgVu0yjyVc5egBO_A";
   try {
@@ -67,6 +64,17 @@ let myfun = async () => {
   let data = await x;
   display(data);
 };
+
+
+
+let debouce =()=>{
+  if (id) {
+    clearTimeout(id);
+  }
+  id = setTimeout(()=>{
+    fun();
+  }, delay);
+}
 
 let display = (data) => {
   document.querySelector(".display").innerHTML = null;

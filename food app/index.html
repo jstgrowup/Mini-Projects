@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <style>
+        #navbar {
+            height: 100px;
+            width: 98%;
+            margin: auto;
+            border: 1px solid red;
+            display: flex;
+
+
+        }
+
+        #inputID {
+            height: 50%;
+            width: 40%;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+
+
+        button {
+            height: 60%;
+            width: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+       
+    </div>
+    
+    <div id="show"></div>
+</body>
+
+</html>
+<script type="module">
+    import nav from "./importNav.js"
+    console.log('nav:', nav)
+    document.querySelector("#navbar").innerHTML = nav
+
+    import { fun, display } from "./importData.js"
+
+    // console.log('datal:', datal)
+    let ape = document.querySelector("#show")
+    let myfun = async () => {
+        let query = document.querySelector("#inputID").value
+        let link = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
+
+        let x = fun(link, query)
+
+
+        let data = await x
+        console.log('data:', data.meals)
+        display(data.meals, ape)
+
+    }
+    document.querySelector("#btn").addEventListener("click", myfun)
+
+
+
+</script>
