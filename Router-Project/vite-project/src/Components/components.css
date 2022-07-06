@@ -1,0 +1,22 @@
+.mainDIV{
+    border: 1px solid red;
+    height: 150px;
+    width: 97%;
+    display: flex;
+    padding: 5rem;
+    justify-content: space-between;
+}
+.mainDIV>div{
+    border: 1px solid black;
+    width: 50%;
+    height: 100%;
+}
+.firstDIV{
+    display: flex;
+    text-decoration: none;
+
+}
+.firstDIV>div{
+    border: 1px solid black;
+    
+}
