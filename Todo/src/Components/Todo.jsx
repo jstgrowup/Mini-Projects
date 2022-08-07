@@ -9,9 +9,9 @@ export default function Todo() {
   const [sortBy, updateSort] = useState("ASC");
   useEffect(() => {
     getTodos();
-  }, []);
+  }, [sortBy]);
   const getTodos = (props = "ASC") => {
-    console.log(props);
+    // console.log(props);
     axios
       .get(
         `https://obscure-taiga-80364.herokuapp.com/data?_sort=title&_order=${props}`
@@ -56,7 +56,7 @@ export default function Todo() {
     updateSort(sortBy === "ASC" ? "DESC" : "ASC");
     getTodos(sortBy);
   };
-  console.log(todo);
+  // console.log(todo);
   return loading ? (
     <h1>Loading</h1>
   ) : (
