@@ -1,20 +1,19 @@
-export default function TodoList({title,status,id}){
-    return(
-        <>
-        <div>
-            <b>{title}</b> {status?"DONE":"NOT DONE"}
-        </div>
- 
-
-
-
-
-
-
-
-
-        
-        
-        </>
-    )
+export default function TodoList({
+  handleDelete,
+  title,
+  status,
+  id,
+  handleToggle,
+}) {
+  return (
+    <>
+      <div>
+        <b>{title}</b>{" "}
+        <button onClick={() => handleToggle(id, status)}>
+          {status ? "DONE" : "NOT DONE"}
+        </button>
+        <button onClick={() => handleDelete(id)}>DELETE</button>
+      </div>
+    </>
+  );
 }
