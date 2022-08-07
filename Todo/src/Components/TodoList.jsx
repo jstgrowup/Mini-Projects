@@ -1,3 +1,5 @@
+import { Box, Button, Flex, Heading } from "@chakra-ui/react";
+
 export default function TodoList({
   handleDelete,
   title,
@@ -7,13 +9,14 @@ export default function TodoList({
 }) {
   return (
     <>
-      <div>
-        <b>{title}</b>{" "}
-        <button onClick={() => handleToggle(id, status)}>
+      <Flex gap={"20"} align={"center"} mb={"15px"}>
+       <Heading size={"md"}>{title}</Heading>{" "}
+
+        <Button onClick={() => handleToggle(id, status)} colorScheme={status?"green":"red"}>
           {status ? "DONE" : "NOT DONE"}
-        </button>
-        <button onClick={() => handleDelete(id)}>DELETE</button>
-      </div>
+        </Button>
+        <Button onClick={() => handleDelete(id)} colorScheme="red">DELETE</Button>
+      </Flex>
     </>
   );
 }

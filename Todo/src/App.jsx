@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
 // import './App.css'
-import Todo from './Components/Todo'
-
+import Todo from "./Components/Todo";
+import { ChakraProvider } from "@chakra-ui/react";
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <Todo/>
+      <ChakraProvider>
+        <Todo />
+      </ChakraProvider>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
