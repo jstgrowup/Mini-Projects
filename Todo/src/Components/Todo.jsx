@@ -4,20 +4,26 @@ import { useEffect, useState } from "react";
 import AddTodo from "./AddTodo";
 import Pagination from "./Pagination";
 import TodoList from "./TodoList";
-
+// adding
+// toggle
+// delete
+// sorting
+// pagination
 export default function Todo() {
   const [todo, setTodos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [sortBy, updateSort] = useState("ASC");
   const [page, setPage] = useState(1);
+
   useEffect(() => {
     getTodos();
   }, [sortBy, page]);
-  const getTodos = (props = "ASC") => {
-    // console.log(props);
+  const getTodos = () => {
+   
+    
     axios
       .get(
-        `https://obscure-taiga-80364.herokuapp.com/data?_sort=title&_order=${props}&_page=${page}&_limit=2`
+        `https://obscure-taiga-80364.herokuapp.com/data?_sort=title&_order=${sortBy}&_page=${page}&_limit=3`
       )
       .then((res) => setTodos(res.data))
       .catch((err) => alert(err))
@@ -57,7 +63,7 @@ export default function Todo() {
   };
   const handleSort = () => {
     updateSort(sortBy === "ASC" ? "DESC" : "ASC");
-    getTodos(sortBy);
+   
   };
   // console.log(todo);
   return loading ? (
