@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 const links = [
   { path: "/", title: "HOME" },
@@ -14,7 +14,6 @@ const links = [
     path: "/womens",
     title: "WOMENS",
   },
-
 ];
 export default function Navbar() {
   const activeStyle = {
@@ -74,6 +73,15 @@ export default function Navbar() {
             >
               <Heading size={"sm"}>Cart</Heading>
             </NavLink>
+            <Image
+              src="https://www.clipartmax.com/png/middle/118-1185597_free-shopping-cart-icon-png.png"
+              alt="Cart"
+              
+              boxSize={"50px"}
+              borderRadius={"20%"}
+            />
+              {" "}
+          
           </Flex>
         </Box>
       </Box>
