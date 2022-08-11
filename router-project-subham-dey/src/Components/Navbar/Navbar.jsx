@@ -14,6 +14,10 @@ const links = [
     path: "/womens",
     title: "WOMENS",
   },
+  {
+    path: "/unisex",
+    title: "UNISEX",
+  },
 ];
 export default function Navbar() {
   const activeStyle = {
@@ -27,14 +31,14 @@ export default function Navbar() {
   return (
     <>
       <Box
-        border="1px"
+        borderRadius={"20px 20px 0px 0px"}
         width={"100%"}
-        h="60px"
+        h="80px"
         display="flex"
         justifyContent="space-around"
         alignItems="center"
-        color="#444444"
-        fontSize="14px"
+        
+     
         bgColor="#e6e6e6"
         cursor={"pointer"}
       >
@@ -48,7 +52,7 @@ export default function Navbar() {
                 key={el.path}
                 to={el.path}
               >
-                <Heading size={"md"}>{el.title}</Heading>
+                <Heading fontFamily="Roboto,sans-serif" as={"h3"} size={"md"}>{el.title}</Heading>
               </NavLink>
             ))}
           </Flex>
@@ -64,24 +68,20 @@ export default function Navbar() {
               style={({ isActive }) => (isActive ? activeStyle : defaultStyle)}
               to={"/login"}
             >
-              <Heading size={"sm"}>Login</Heading>
+              <Heading fontFamily="Roboto,sans-serif" as={"h3"} size={"sm"}>Login</Heading>
             </NavLink>
-
             <NavLink
               style={({ isActive }) => (isActive ? activeStyle : defaultStyle)}
               to={"/cart"}
             >
-              <Heading size={"sm"}>Cart</Heading>
+              <Heading fontFamily="Roboto,sans-serif" as={"h3"} size={"sm"}>Cart</Heading>
             </NavLink>
             <Image
               src="https://www.clipartmax.com/png/middle/118-1185597_free-shopping-cart-icon-png.png"
               alt="Cart"
-              
               boxSize={"50px"}
               borderRadius={"20%"}
-            />
-              {" "}
-          
+            />{" "}
           </Flex>
         </Box>
       </Box>

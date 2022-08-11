@@ -3,9 +3,10 @@ import { Box, Image } from "@chakra-ui/react";
 export default function Banner() {
   return (
     <>
-      <Box width={"100%"}>
+      <Box  >
         <Image
           width={"100%"}
+          h={"600px"}
           src="https://listingthemes.com/wp-content/uploads/2018/03/offer-banner.png"
           alt="amazon1"
         />
