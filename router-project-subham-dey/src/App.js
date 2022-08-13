@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import AllRoutes from "./Components/Routes/Allroutes";
 
 function App() {
+  // console.log(REACT_APP_URL);
   return (
     <div className="App">
       {/* <Navbar/>

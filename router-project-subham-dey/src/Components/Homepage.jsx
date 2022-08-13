@@ -1,7 +1,7 @@
 import Banner from "./Banner";
 import Footer from "./Footer/Footer";
 import Navbar from "./Navbar/Navbar";
-import Products from "./Products";
+import Products from "../Products/Products";
 import AllRoutes from "./Routes/Allroutes";
 
 export default function HomePage() {
@@ -9,7 +9,7 @@ export default function HomePage() {
     <>
       <Navbar />
       <Banner />
-      <Products/>
+      <Products />
       <AllRoutes />
       <Footer />
     </>
