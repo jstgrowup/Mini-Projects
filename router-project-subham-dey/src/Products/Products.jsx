@@ -7,8 +7,8 @@ const fetchdata = () => {
 export default function Products() {
   const [data, updateData] = useState([]);
   useEffect(() => {
-    fetchdata().then((res) => updateData(res.data));
-  }, []);
+    fetchdata().then((res) => updateData(res.data)).catch((err) => console.log(err))
+  }, [data]);
 
 
   return (
