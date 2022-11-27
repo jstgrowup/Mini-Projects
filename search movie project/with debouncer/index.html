@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>movie search</title>
-    <link rel="stylesheet" href="index.css">
-</head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<body>
+  <body>
     <div id="container">
-        <h1 style="margin-right:80px ;margin-bottom: 30px;">Search your favourite movie name</h1>
-        <div id="searchbar">
-            <input type="text" placeholder="Enter the movie name" id="myInput" oninput="debounceFunction(main,1000)" />
-        </div>
+      <h1 style="margin-right: 80px; margin-bottom: 30px">
+        Search your favourite movie name
+      </h1>
+      <div id="searchbar">
+        <input
+          type="text"
+          placeholder="Enter the movie name"
+          id="myInput"
+          oninput="debounceFunction(main,1000)"
+        />
+      </div>
 
-        <div id="show"></div>
+      <div id="show"></div>
     </div>
-</body>
-
+  </body>
 </html>
-<script src="index.js">
-  
-</script>
+<script src="index.js"></script>

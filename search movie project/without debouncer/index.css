@@ -1,8 +1,9 @@
-*{
+* {
     margin: 1.9px;
     padding: 0px;
     font-family: sans-serif;
 }
+
 #container {
     height: auto;
     width: 90%;
@@ -17,7 +18,7 @@
     margin: auto;
     /* border: 1px solid red; */
     display: flex;
-  
+
 }
 
 input {
@@ -47,8 +48,8 @@ input {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto, 1fr);
-    gap: 20px; 
-      margin-top: 50px; 
+    gap: 20px;
+    margin-top: 50px;
 }
 
 .card {
@@ -61,17 +62,20 @@ input {
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
-.card:hover{
+
+.card:hover {
     transform: scale(1.03);
 }
+
 .card>img {
     width: 100%;
     height: 70%;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
-    
+
 }
-#error{
+
+#error {
     height: 600px;
     width: 700px;
     margin-left: 180px;
